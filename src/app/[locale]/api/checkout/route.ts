@@ -45,8 +45,8 @@ export async function POST(req: Request) {
     // 📩 EMAIL ADMIN
     // =========================
     await resend.emails.send({
-      from: "EscapaMex <info@vanguardiatecnologia.com>",
-      to: ["info@vanguardiatecnologia.com"], // ⚠️ cambia esto
+      from: "EscapaMex <info@escapamex.com>",
+      to: ["info@escapamex.com"], // ⚠️ cambia esto
       subject: `Nueva compra #${orderId}`,
       html: `
         <div style="font-family: Arial; background:#f9fafb; padding:20px;">
@@ -97,7 +97,7 @@ export async function POST(req: Request) {
     // 📩 EMAIL CLIENTE (TICKET)
     // =========================
     await resend.emails.send({
-      from: "EscapaMex <info@vanguardiatecnologia.com>",
+      from: "EscapaMex <info@escapamex.com>",
       to: [customer.email],
       subject: `Tu compra en EscapaMex #${orderId}`,
       html: `
