@@ -1,0 +1,302 @@
+{
+  "Footer": {
+    "description": "Escapamex was born from the desire and need to provide great experiences in every journey.",
+    "plansTitle": {
+      "line1": "Discover the plans",
+      "line2": "we have for you"
+    },
+    "quotePlan": "Get a Quote",
+    "experiences": "Explore our experiences",
+    "rights": "All rights reserved Escapamex 2026",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "refunds": "Refund Policy"
+  },
+  "Header": {
+    "phone": "+52 1 55 1234 5678",
+    "email": "info@escapamex.com",
+    "home": "Home",
+    "quotePlan": "Get a Quote",
+    "contact": "Contact",
+    "payQuote": "Pay your quote",
+    "store": "Store",
+    "items": "item(s)",
+    "viewCart": "Click to view cart"
+  },
+  "Home": {
+    "hero": {
+      "badge": "Travel experiences designed for you",
+      "title": {
+        "line1": "Your gateway to travel",
+        "line2": "and extraordinary experiences"
+      },
+      "cta": "Explore our experiences",
+      "card": {
+        "title": "Personalized attention",
+        "subtitle": "From start to finish"
+      },
+      "imageAlt": "Tropical beach destination"
+    },
+    "features": {
+      "sectionLabel": "What we do best",
+      "heading": "Everyone dreams of traveling; we make it possible.",
+      "items": {
+        "logistics": {
+          "title": "Smooth logistics",
+          "description": "Travel logistics can be overwhelming. We take care of every detail so you can enjoy your trip."
+        },
+        "personalized": {
+          "title": "Personalized itineraries",
+          "description": "We specialize in creating personalized travel experiences tailored to your specific preferences and interests."
+        },
+        "support": {
+          "title": "Travel support",
+          "description": "We offer expert guidance and ensure your peace of mind from planning to the journey itself."
+        }
+      }
+    },
+    "about": {
+      "sectionLabel": "Who we are",
+      "title": "Where extraordinary experiences begin",
+      "description": "With extensive experience and a dedicated team of travel experts, we are committed to delivering seamless travel experiences, personalized service, and attention to detail. We take the time to listen to your wishes and create tailor-made itineraries that reflect your individual style and exceed your expectations.",
+      "items": {
+        "trust": {
+          "title": "Trust",
+          "description": "Clear processes and real support."
+        },
+        "experiences": {
+          "title": "Experiences",
+          "description": "Routes designed to help you enjoy more."
+        }
+      },
+      "imageAlt1": "Travel destination",
+      "imageAlt2": "Mayan ruins"
+    },
+    "customPlan": {
+      "sectionLabel": "Custom plan",
+      "title": "Do you want a special experience?",
+      "question": "Need more information or want to plan a group adventure?",
+      "emphasis": "We can help",
+      "text": "If you have questions about our services, want more details about this tour, or are planning a special experience for a group, contact us.",
+      "cta": "Get a Quote"
+    },
+    "why": {
+      "sectionLabel": "Why choose us",
+      "title": "We design experiences that go far beyond a simple tour.",
+      "items": {
+        "first": "Guaranteed authenticity",
+        "second": "A variety of experiences",
+        "third": "Expert guides and personalized attention"
+      },
+      "imageAlt1": "Hot air balloon",
+      "imageAlt2": "Traveler"
+    },
+    "contact": {
+      "sectionLabel": "Stay in touch",
+      "title": "Travel with us",
+      "text": "Tired of dreaming about the life you want? It is time to act and make those dreams real. Let us help you open the door to your dreams and start living the life you want.",
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Your message..."
+        },
+        "submit": "Send",
+        "sending": "Sending..."
+      },
+      "infoTitle": "Contact information",
+      "info": {
+        "email": "info@escapamex.com",
+        "phone": "(+52) 155 1456 7890",
+        "location": "Mexico City"
+      },
+      "badge": {
+        "title": "Close attention",
+        "subtitle": "Fast and clear response"
+      },
+      "imageAlt": "Travel planning"
+    }
+  },
+  "CarritoPage": {
+    "errors": {
+      "emptyCart": "Your cart is empty.",
+      "missingFields": "Please complete all required fields.",
+      "paymentFailed": "The payment could not be completed."
+    },
+    "emptyState": {
+      "title": "Your cart is empty",
+      "description": "Explore our experiences and add the ones you like most!",
+      "cta": "See experiences"
+    },
+    "paidState": {
+      "title": "Payment completed",
+      "description": "Your purchase was processed successfully. We sent the confirmation by email.",
+      "cta": "Keep exploring"
+    },
+    "header": {
+      "title": "Your Cart ({count, plural, one {# item} other {# items}})",
+      "clearCart": "Clear cart"
+    },
+    "buyer": {
+      "title": "Customer details",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "country": "Country",
+      "address": "Address",
+      "city": "City",
+      "state": "State",
+      "postalCode": "Postal code",
+      "firstNamePlaceholder": "First name",
+      "lastNamePlaceholder": "Last name and middle name",
+      "emailPlaceholder": "you@example.com",
+      "phonePlaceholder": "+52 55 1234 5678",
+      "countryPlaceholder": "Mexico",
+      "addressPlaceholder": "Street, number, neighborhood",
+      "cityPlaceholder": "Mexico City",
+      "statePlaceholder": "Mexico City",
+      "postalCodePlaceholder": "01000"
+    },
+    "payment": {
+      "title": "Payment details",
+      "cardName": "Cardholder name",
+      "cardNumber": "Card number",
+      "month": "Month",
+      "year": "Year",
+      "cvv": "CVV",
+      "cardNamePlaceholder": "As it appears on the card",
+      "cardNumberPlaceholder": "4111 1111 1111 1111",
+      "monthPlaceholder": "MM",
+      "yearPlaceholder": "YY",
+      "cvvPlaceholder": "123",
+      "processing": "Processing...",
+      "payNow": "Pay now"
+    },
+    "summary": {
+      "title": "Order summary",
+      "subtotal": "Subtotal ({count, plural, one {# item} other {# items}})",
+      "tax": "VAT included",
+      "taxValue": "Included",
+      "total": "Total",
+      "note": "Once payment is complete, we'll send the confirmation by email.",
+      "continueShopping": "Continue shopping",
+      "accepted": "We accept"
+    }
+  },
+  "ContactoPage": {
+    "hero": {
+      "badge": "We are here to help you",
+      "title": "Contact Us"
+    },
+    "form": {
+      "title": "Get in touch",
+      "name": "Name",
+      "email": "Email",
+      "message": "Write your message here *",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "successTitle": "Message sent",
+      "successMessage": "We will get back to you as soon as possible."
+    },
+    "info": {
+      "title": "Contact information",
+      "location": "Mexico City, Mexico",
+      "phone": "+52 1 55 1234 5678",
+      "email": "info@escapamex.com"
+    }
+  },
+  "CotizaTuPlanPage": {
+    "hero": {
+      "badge": "Personalized experiences",
+      "title": "Get a quote"
+    },
+    "content": {
+      "title1": "Looking for a personalized experience?",
+      "title2": "Want to learn more or plan a trip with friends?",
+      "paragraph1": "Do you have questions about our services, want more details about this tour, or are you planning a special experience for your group?",
+      "paragraph2": "We are ready to help. Our team offers personalized support to design an adventure tailored to your interests and needs.",
+      "paragraph3": "Whether you're looking for a cultural immersion, a day exploring cenotes, or a unique mix of activities in Tulum and its surroundings, we will be happy to help you create the perfect experience."
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "experience": "What experience are you looking for?",
+      "details": "Describe what you have in mind so we can prepare your quote *",
+      "submit": "Submit",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Request sent",
+      "description": "Our team will contact you to build your experience.",
+      "cta": "View experiences"
+    },
+    "cta": {
+      "title": "Already have a quote?",
+      "description": "If you already have an ID, you can go to “Pay your quote”. If you're still exploring options, we invite you to visit our store.",
+      "pay": "Pay quote",
+      "explore": "View experiences"
+    }
+  },
+  "payQuote": {
+    "hero": {
+      "title": "Pay your quote",
+      "description": "Enter your quote number and complete the process to secure your experience."
+    },
+    "form": {
+      "title": "Payment details",
+      "quoteNumber": "Quote number",
+      "quotePlaceholder": "Ex: 12345",
+      "price": "Price (MXN)",
+      "pricePlaceholder": "Ex: 2500",
+      "submit": "Add to cart",
+      "error": "Please complete all fields correctly"
+    },
+    "success": {
+      "title": "Added to cart",
+      "description": "Your quote is ready to be paid.",
+      "cta": "Go to cart"
+    }
+  },
+  "store": {
+    "heroTitle": "Explore experiences",
+    "heroSubtitle": "Find the perfect trip for you",
+    "searchPlaceholder": "Search experiences...",
+    "loading": "Loading...",
+    "results": "{count} experiences found",
+    "noResults": "No results found",
+    "clear": "Clear search",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "card": {
+      "featured": "Featured",
+      "currency": "MXN (VAT included)",
+      "add": "Add",
+      "inCart": "In cart"
+    }
+  },
+  "experience": {
+    "back": "Back to experiences",
+    "tarifas": "Group pricing",
+    "person": "people",
+    "costforPerson": "Price per person",
+    "errorTitle": "Error",
+    "successTitle": "Done",
+    "noPricingAvailable": "No pricing available for this quantity",
+    "addedToCart": "Experience added to cart",
+    "selectDateError": "Please select a date before continuing",
+    "total": "Total",
+    "addToCart": "Add to cart",
+    "addMore": "Add more",
+    "about": "About this experience",
+    "related": "You may also be interested in"
+  }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Albert+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal: #4fb6b9;
+  --teal-light: #7dd3d5;
+  --orange: #f59e0b;
+  --orange-hover: #ea580c;
+  --dark-bg: #2b2e35;
+  --light-bg: #fbfafb;
+  --text-gray: #6b7280;
+  --text-dark: #1f2937;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Albert Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: 'Covered By Your Grace', cursive;
+  }
+  .text-teal {
+    color: var(--teal);
+  }
+  .bg-teal {
+    background-color: var(--teal);
+  }
+  .text-orange-custom {
+    color: var(--orange);
+  }
+  .bg-orange-custom {
+    background-color: var(--orange);
+  }
+  .hover\:bg-orange-hover:hover {
+    background-color: var(--orange-hover);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Decorative dots */
+.dot-teal {
+  width: 12px;
+  height: 12px;
+  background-color: var(--teal);
+  border-radius: 50%;
+}
+
+.dot-green {
+  width: 12px;
+  height: 12px;
+  background-color: #34d399;
+  border-radius: 50%;
+}
