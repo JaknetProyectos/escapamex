@@ -448,15 +448,15 @@ const Contact = () => {
             <h3 className="text-2xl font-extrabold text-[#2b2e35] mb-6">{t("contact.infoTitle")}</h3>
 
             <div className="space-y-4">
-              <a href="mailto:info@escapamex.com" className="flex items-center gap-3 text-gray-600 hover:text-[#03807a] transition-colors">
+              <Link href="mailto:info@escapamex.com" className="flex items-center gap-3 text-gray-600 hover:text-[#03807a] transition-colors">
                 <Mail className="w-5 h-5 text-[#08aab9]" />
                 {t("contact.info.email")}
-              </a>
+              </Link>
 
-              <a href="tel:+521551456789" className="flex items-center gap-3 text-gray-600 hover:text-[#03807a] transition-colors">
+              <Link href="tel:+521551456789" className="flex items-center gap-3 text-gray-600 hover:text-[#03807a] transition-colors">
                 <Phone className="w-5 h-5 text-[#08aab9]" />
                 {t("contact.info.phone")}
-              </a>
+              </Link>
 
               <div className="flex items-center gap-3 text-gray-600">
                 <MapPin className="w-5 h-5 text-[#08aab9]" />

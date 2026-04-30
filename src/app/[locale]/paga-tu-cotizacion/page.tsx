@@ -8,6 +8,7 @@ import React, { useState } from 'react'
 import { CreditCard, CheckCircle, ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useAlert } from '@/context/AlertContext'
+import { Link } from '@/i18n/routing'
 
 export default function Page() {
     const t = useTranslations('payQuote')
@@ -103,13 +104,13 @@ export default function Page() {
                                     {t('success.description')}
                                 </p>
 
-                                <a
+                                <Link
                                     href="/carrito"
                                     className="inline-flex items-center gap-2 bg-[#e87b1c] hover:bg-[#cc6713] text-white px-6 py-3 rounded-full font-semibold"
                                 >
                                     {t('success.cta')}
                                     <ArrowRight className="w-4 h-4" />
-                                </a>
+                                </Link>
                             </div>
                         ) : (
                             <form

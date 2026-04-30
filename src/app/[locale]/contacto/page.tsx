@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { MapPin, Phone, Mail, Send, CheckCircle, Sparkles } from "lucide-react";
 import { useContact } from "@/hooks/useContact";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function ContactoPage() {
   const t = useTranslations("ContactoPage");
@@ -159,14 +160,14 @@ export default function ContactoPage() {
 
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-[#fcb239]" />
-                  <a href="tel:+521551234567">{t("info.phone")}</a>
+                  <Link href="tel:+521551234567">{t("info.phone")}</Link>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <Mail className="w-6 h-6 text-[#fcb239]" />
-                  <a href="mailto:info@escapamex.com">
+                  <Link href="mailto:info@escapamex.com">
                     {t("info.email")}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

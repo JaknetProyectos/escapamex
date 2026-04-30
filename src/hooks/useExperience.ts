@@ -101,12 +101,14 @@ export function useRelatedExperiences(experienceId: string, limit = 3) {
         if (currentError || !current) throw currentError;
 
         // 2. Buscar relacionadas por categoría
-        let { data: related, error } = await supabase
+        const { data: relatedData, error } = await supabase
           .from("experiences_escapamex")
           .select("*")
           .eq("category", current.category)
           .neq("id", experienceId)
           .limit(limit);
+
+        let related = relatedData;
 
         if (!related) {
           setData([])
