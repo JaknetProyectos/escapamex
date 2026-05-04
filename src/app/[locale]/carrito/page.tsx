@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, type ChangeEvent, type FormEvent } from "react";
-import {Link} from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useCart } from "@/context/CartContext";
@@ -169,7 +169,7 @@ export default function CarritoPage() {
         paymentResult: paymentResponse,
       };
 
-      const emailResponse = await fetch("/api/checkout", {
+      const emailResponse = await fetch(`/${locale ?? "es"}/api/checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -185,7 +185,7 @@ export default function CarritoPage() {
       clearCart();
       setIsPaid(true);
     } catch (err) {
-      const message = err instanceof Error ? err.message : t("errors.paymentFailed");
+      const message = t("errors.paymentFailed");
       setCheckoutError(message);
     } finally {
       setIsSubmitting(false);

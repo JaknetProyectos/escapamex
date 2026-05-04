@@ -17,13 +17,13 @@ export default function Page() {
     const { addToCart } = useCart()
 
     const [cotizacion, setCotizacion] = useState('')
-    const [price, setPrice] = useState(0)
+    const [price, setPrice] = useState<number | "">("");
     const [added, setAdded] = useState(false)
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
 
-        if (!cotizacion || price <= 0) {
+        if (!cotizacion) {
             showAlert({
                 type: "error",
                 title: "Error",
@@ -39,7 +39,7 @@ export default function Page() {
             category: 'custom',
             description: `Custom quote #${cotizacion}`,
             shortDescription: 'Custom experience',
-            price: price,
+            price: Number(price),
             currency: 'MXN',
             image: '/favicon.png',
             images: [],
@@ -144,7 +144,17 @@ export default function Page() {
                                         <input
                                             type="number"
                                             value={price}
-                                            onChange={(e) => setPrice(Number(e.target.value))}
+                                            min={0}
+                                            onChange={(e) => {
+                                                const value = e.target.value;
+
+                                                if (value === "") {
+                                                    setPrice("");
+                                                    return;
+                                                }
+
+                                                setPrice(Number(value));
+                                            }}
                                             className="w-full mt-2 rounded-xl border border-gray-200 px-4 py-3 focus:border-[#08aab9] focus:ring-2 focus:ring-[#08aab9]/20 outline-none"
                                             placeholder={t('form.pricePlaceholder')}
                                         />

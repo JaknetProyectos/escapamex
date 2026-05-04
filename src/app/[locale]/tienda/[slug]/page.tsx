@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -40,11 +40,41 @@ export default function ExperienceDetailPage() {
   const { showAlert } = useAlert()
 
   function getTarifaPorCantidad(tarifas: Tarifa[], cantidad: number) {
-    return tarifas.find((t) => {
-      if (t.max === null) return cantidad >= t.min;
-      return cantidad >= t.min && cantidad <= t.max;
+    // 1. Ordenar por min ascendente
+    const sorted = [...tarifas].sort((a, b) => a.min - b.min);
+
+    // 2. Buscar tarifa exacta o dentro de rango
+    const exact = sorted.find((t) => {
+      const cumpleMin = cantidad >= t.min;
+      const cumpleMax = t.max === null ? true : cantidad <= t.max;
+      return cumpleMin && cumpleMax;
     });
+
+    if (exact) return exact;
+
+    // 3. Fallback: la más alta que no supere la cantidad
+    const fallback = sorted
+      .filter((t) => t.min <= cantidad)
+      .sort((a, b) => b.min - a.min)[0];
+
+    return fallback || null;
   }
+
+  const tarifaActual =
+    experience?.tafiras && experience.tafiras.length > 0
+      ? getTarifaPorCantidad(experience.tafiras, quantity)
+      : null;
+
+  const precioUnitario = tarifaActual
+    ? tarifaActual.precioPorPersona
+    : experience?.price || 0;
+
+  const totalCalculado = precioUnitario * quantity;
+
+  useEffect(() => {
+    console.log(experience)
+  }, [experience])
+
 
   const handleAddToCart = () => {
     if (!experience) return;
@@ -94,6 +124,8 @@ export default function ExperienceDetailPage() {
   const images = experience.images?.length
     ? experience.images
     : [experience.image];
+
+
 
   return (
     <main className="min-h-screen bg-white">
@@ -158,7 +190,7 @@ export default function ExperienceDetailPage() {
             <div className="bg-[#f8fafc] border border-[#08aab9]/20 rounded-2xl p-6 mb-6">
 
               <div className="text-3xl font-bold text-[#e87b1c] mb-4">
-                ${experience.price.toLocaleString()} MXN
+                ${precioUnitario.toLocaleString()} MXN
               </div>
 
               <input
@@ -181,7 +213,7 @@ export default function ExperienceDetailPage() {
 
               <div className="mb-4 font-semibold">
                 {t("total")}: $
-                {(experience.price * quantity).toLocaleString()}
+                {totalCalculado.toLocaleString()}
               </div>
 
               <button
