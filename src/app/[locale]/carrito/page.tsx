@@ -505,7 +505,7 @@ export default function CarritoPage() {
                 </h2>
 
                 <div>
-                  <Image src="/etomin.png" width={150} height={30} alt="Visa" className="object-contain" />
+                  <Image src="/octano.png" width={150} height={30} alt="Visa" className="object-contain" />
                 </div>
               </div>
 

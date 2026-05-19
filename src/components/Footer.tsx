@@ -4,18 +4,12 @@ import Image from "next/image";
 import { FileText, Store, ShieldCheck, Receipt } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter, usePathname } from "@/i18n/routing";
+import { useLocaleContext } from "@/context/LocaleContext";
 
 export function Footer() {
   const t = useTranslations("Footer");
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-
-
-  const toggleLanguage = (newLocale: "en" | "es") => {
-    router.replace(pathname, { locale: newLocale });
-  };
+  
+  const {switchLanguage,isPending,locale} = useLocaleContext()
 
   return (
     <footer className="bg-[#03807a] text-white">
@@ -70,13 +64,13 @@ export function Footer() {
             {/* Language Switch */}
             <div className="mt-6 flex gap-2">
               <button
-                onClick={() => toggleLanguage("es")}
+                onClick={() => switchLanguage("es")}
                 className={`px-3 py-1 rounded text-sm ${locale === "es" ? "bg-[#fcb239] text-black" : "bg-white/10"}`}
               >
                 ES
               </button>
               <button
-                onClick={() => toggleLanguage("en")}
+                onClick={() => switchLanguage("en")}
                 className={`px-3 py-1 rounded text-sm ${locale === "en" ? "bg-[#fcb239] text-black" : "bg-white/10"}`}
               >
                 EN
