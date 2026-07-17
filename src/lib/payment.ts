@@ -110,6 +110,10 @@ export async function processEtominPayment(payment: PaymentData) {
             config
         );
 
+        if (saleResponse.data.status != "APPROVED") {
+            return new Error("Pago rechazado")
+        }
+
         return saleResponse.data;
 
     } catch (error: any) {
